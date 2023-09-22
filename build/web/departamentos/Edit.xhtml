@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DepartamentosEditDlg" widgetVar="DepartamentosEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditDepartamentosTitle}">
+            <h:form id="DepartamentosEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{departamentosController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditDepartamentosLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{departamentosController.selected.id}" title="#{bundle.EditDepartamentosTitle_id}" required="true" requiredMessage="#{bundle.EditDepartamentosRequiredMessage_id}"/>
+                        <p:outputLabel value="#{bundle.EditDepartamentosLabel_departamentoCodigo}" for="departamentoCodigo" />
+                        <p:inputText id="departamentoCodigo" value="#{departamentosController.selected.departamentoCodigo}" title="#{bundle.EditDepartamentosTitle_departamentoCodigo}" required="true" requiredMessage="#{bundle.EditDepartamentosRequiredMessage_departamentoCodigo}"/>
+                        <p:outputLabel value="#{bundle.EditDepartamentosLabel_departamentoNombre}" for="departamentoNombre" />
+                        <p:inputText id="departamentoNombre" value="#{departamentosController.selected.departamentoNombre}" title="#{bundle.EditDepartamentosTitle_departamentoNombre}" required="true" requiredMessage="#{bundle.EditDepartamentosRequiredMessage_departamentoNombre}"/>
+                        <p:outputLabel value="#{bundle.EditDepartamentosLabel_fechaHoraCrea}" for="fechaHoraCrea" />
+                        <p:calendar id="fechaHoraCrea" pattern="MM/dd/yyyy HH:mm:ss" value="#{departamentosController.selected.fechaHoraCrea}" title="#{bundle.EditDepartamentosTitle_fechaHoraCrea}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditDepartamentosLabel_fechaHoraModifica}" for="fechaHoraModifica" />
+                        <p:calendar id="fechaHoraModifica" pattern="MM/dd/yyyy HH:mm:ss" value="#{departamentosController.selected.fechaHoraModifica}" title="#{bundle.EditDepartamentosTitle_fechaHoraModifica}"  showOn="button"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{departamentosController.update}" value="#{bundle.Save}" update="display,:DepartamentosListForm:datalist,:growl" oncomplete="handleSubmit(args, 'DepartamentosEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="DepartamentosEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
