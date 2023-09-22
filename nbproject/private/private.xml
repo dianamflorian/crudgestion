@@ -14,6 +14,12 @@
             <file>file:/C:/Servers/crudgestion/web/template.xhtml</file>
             <file>file:/C:/Servers/crudgestion/web/vista1.xhtml</file>
             <file>file:/C:/Servers/crudgestion/src/java/crudgestion/exception/ResponseStatus.java</file>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Servers/crudgestion/web/index.xhtml</file>
+            <file>file:/C:/Servers/crudgestion/nbproject/build-impl.xml</file>
+            <file>file:/C:/Servers/crudgestion/web/template.xhtml</file>
             <file>file:/C:/Servers/crudgestion/src/java/crudgestion/controller/EmpleadosController.java</file>
             <file>file:/C:/Servers/crudgestion/web/WEB-INF/web.xml</file>
             <file>file:/C:/Servers/crudgestion/src/java/Bundle.properties</file>
@@ -23,6 +29,10 @@
             <file>file:/C:/Servers/crudgestion/src/java/crudgestion/repository/EmpleadosRepository.java</file>
             <file>file:/C:/Servers/crudgestion/web/WEB-INF/faces-config.xml</file>
             <file>file:/C:/Servers/crudgestion/pom.xml</file>
+            <file>file:/C:/Servers/crudgestion/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Servers/crudgestion/src/conf/persistence.xml</file>
+            <file>file:/C:/Servers/crudgestion/pom.xml</file>
+            <file>file:/C:/Servers/crudgestion/src/java/crudgestion/controller/DepartamentosFacade.java</file>
             <file>file:/C:/Servers/crudgestion/src/java/crudgestion/model/Departamentos.java</file>
         </group>
     </open-files>
